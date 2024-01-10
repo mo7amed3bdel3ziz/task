@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:padding="5dp"
+
+                />
+<!--            android:src="@drawable/ic_baseline_menu"-->
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="29dp"
+                android:layout_weight="1"
+               />
+<!--            android:src="@drawable/downloaddd"-->
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:padding="12dp"
+                />
+<!--            android:src="@drawable/ic_baseline_search_24"-->
+        </LinearLayout>
+
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="?actionBarSize"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--&lt;!&ndash;                <com.smarteist.autoimageslider.SliderView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/imageSlider"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="217dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderAnimationDuration="600"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderAutoCycleDirection="back_and_forth"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderAutoCycleEnabled="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorAnimationDuration="600"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorGravity="center_horizontal|bottom"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorMargin="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorMarginBottom="1dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorOrientation="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorPadding="3dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorRadius="1.6dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorSelectedColor="#5A5A5A"&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    app:sliderScrollTimeInSec="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderStartAutoCycle="true"&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    />&ndash;&gt;-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/container1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="19dp"-->
+
+<!--                    tools:ignore="MissingConstraints">-->
+<!--&lt;!&ndash;                    app:layout_constraintTop_toBottomOf="@id/imageSlider"&ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/header1"-->
+<!--                        android:layout_width="298dp"-->
+<!--                        android:layout_height="35dp"-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:padding="4dp"-->
+<!--                        android:text="header1"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="21sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintEnd_toStartOf="@+id/btnViewAll"-->
+<!--                        app:layout_constraintHorizontal_bias="0.0"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/btnViewAll"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="22dp"-->
+
+<!--                        android:drawablePadding="8dp"-->
+<!--                        android:padding="4dp"-->
+<!--                        android:text="view_all"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/recyclerView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginVertical="15dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/header1"-->
+<!--                        tools:itemCount="10"-->
+<!--                         />-->
+<!--&lt;!&ndash;                    tools:listitem="@layout/item_product"&ndash;&gt;-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/container2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/container1">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/header2"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="22dp"-->
+<!--                        android:padding="4dp"-->
+<!--                        android:text="header2"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="20sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/btnViewAll2"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="22dp"-->
+
+<!--                        android:drawablePadding="8dp"-->
+<!--                        android:padding="4dp"-->
+<!--                        android:text="view_all1"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/recyclerView2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginVertical="16dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/header2"-->
+<!--                        tools:itemCount="10"-->
+
+<!--                        />-->
+<!--&lt;!&ndash;                    tools:listitem="@layout/item_product2"&ndash;&gt;-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/container3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/container2">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/header3"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:padding="4dp"-->
+<!--                        android:text="header3"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/btnViewAll3"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawablePadding="8dp"-->
+<!--                        android:padding="4dp"-->
+<!--                        android:text="view_all_traders"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:id="@+id/recyclerView3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginVertical="16dp"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/header3"-->
+<!--                        tools:itemCount="10"-->
+
+<!--                        />-->
+<!--&lt;!&ndash;                    tools:listitem="@layout/item_product3"&ndash;&gt;-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--&lt;!&ndash;                <com.smarteist.autoimageslider.SliderView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/imageSlider2"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="217dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintTop_toBottomOf="@id/container3"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderAnimationDuration="600"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderAutoCycleDirection="back_and_forth"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderAutoCycleEnabled="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorAnimationDuration="600"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorGravity="center_horizontal|bottom"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorMargin="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorOrientation="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorPadding="3dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorRadius="1.6dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorSelectedColor="#5A5A5A"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderScrollTimeInSec="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderStartAutoCycle="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorMarginBottom="1dp"/>&ndash;&gt;-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/header4"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="16dp"-->
+<!--                    android:text="videos"-->
+<!--                    android:textAlignment="textStart"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="22sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                 />-->
+<!--&lt;!&ndash;                app:layout_constraintTop_toBottomOf="@id/imageSlider2"&ndash;&gt;-->
+<!--&lt;!&ndash;                <com.smarteist.autoimageslider.SliderView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/imageSlider3"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="200dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="217dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginBottom="70dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintHorizontal_bias="0.498"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintTop_toBottomOf="@id/header4"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintVertical_bias="1.0"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderAnimationDuration="600"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderAutoCycleDirection="back_and_forth"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderAutoCycleEnabled="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorAnimationDuration="600"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorGravity="center_horizontal|bottom"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorMargin="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorOrientation="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorPadding="3dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorRadius="1.6dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorSelectedColor="#5A5A5A"&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    app:sliderScrollTimeInSec="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderStartAutoCycle="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:sliderIndicatorMarginBottom="1dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            </androidx.constraintlayout.widget.ConstraintLayout>&ndash;&gt;-->
+<!--       </ScrollView>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
