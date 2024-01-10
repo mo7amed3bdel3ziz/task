@@ -1,12 +1,12 @@
 package com.example.androidtask.UI
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.example.androidtask.R
 import com.example.androidtask.UI.viewmodels.LoginViewModel
@@ -15,49 +15,52 @@ import com.example.androidtask.databinding.ActivityLoginBinding
 import com.example.androidtask.network.State
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
-    lateinit var viewModel: LoginViewModel
+    private val viewModel: LoginViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_login)
-        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
         binding.goSignup.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
+        }
 
+        binding.loginBTn.setOnClickListener {
             val androidId: String = Settings.Secure.getString(
-                contentResolver,
-                Settings.Secure.ANDROID_ID
+                contentResolver, Settings.Secure.ANDROID_ID
             )
-            binding.loginBTn.setOnClickListener {
-
-                if ( CheckAllFields()){
-                    lifecycleScope.launch() {
-                        viewModel.loginVM(RequestModel(
+            if (CheckAllFields()) {
+                lifecycleScope.launch() {
+                    viewModel.loginVM(
+                        RequestModel(
                             binding.emailID.text.toString(),
                             binding.passwordID.text.toString(),
                             androidId
 
-                        )).collect {
+                        )
+                    ).collect {
 
-                            when (it) {
-                                is State.Loading ->{
+                        when (it) {
+                            is State.Loading -> {
 
-                                }
-                                is State.Success -> {
-                                    Log.d("VisitBranchWithoutPay",it.data.message)
-                                }
-                                is State.Error -> {
-                                    Log.d("VisitBranchWithoutPay",it.messag)
-                                }
+                            }
+
+                            is State.Success -> {
+                                Log.d("VisitBranchWithoutPay", it.data.message)
+                            }
+
+                            is State.Error -> {
+                                Log.d("VisitBranchWithoutPay", it.messag)
                             }
                         }
                     }
                 }
+            }
         }
-    }
+
     }
 
     private fun CheckAllFields(): Boolean {

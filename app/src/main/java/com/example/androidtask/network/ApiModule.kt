@@ -32,6 +32,7 @@ class ApiModule {
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
         var client = OkHttpClient.Builder()
+        client.addInterceptor(interceptor)
        // try {
 
             //client.cache(cache)
